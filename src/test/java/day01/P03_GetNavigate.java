@@ -1,8 +1,7 @@
+package day01;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-
-import javax.annotation.concurrent.ThreadSafe;
-import java.time.Duration;
 
 public class P03_GetNavigate {
 
