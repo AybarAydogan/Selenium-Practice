@@ -42,6 +42,7 @@ public class P04_ilkSeleniumTesti {
             System.out.println("TITLE and URL TEST FAİLED");
         }
 
+        System.out.println("-------------------------------");
         driver.get("https://wisequarter.com/" );
 
         String wqTitle = driver.getTitle();
