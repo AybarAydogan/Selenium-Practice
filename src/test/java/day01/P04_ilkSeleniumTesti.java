@@ -23,12 +23,22 @@ public class P04_ilkSeleniumTesti {
      */
 
     public static void main(String[] args) {
-        System.setProperty("Wedriver.chrome.driver","src/resources/chromedriver.exe");
+        System.setProperty("Wedriver.chrome.driver", "src/resources/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
 
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10000));
 
+        driver.get("https://www.otto.de");
+
+        String ottoUrl = driver.getCurrentUrl();
+        String ottoTitle = driver.getTitle();
+
+        if (ottoTitle.contains("0TT0") && ottoUrl.contains("0TT0")) {
+            System.out.println("TITLE and URL TEST PASSED");
+        } else {
+            System.out.println("TITLE and URL TEST FAİLED");
+        }
 
 
     }
