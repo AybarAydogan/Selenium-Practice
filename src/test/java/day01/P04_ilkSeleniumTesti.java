@@ -34,11 +34,31 @@ public class P04_ilkSeleniumTesti {
         String ottoUrl = driver.getCurrentUrl();
         String ottoTitle = driver.getTitle();
 
+        System.out.println(ottoTitle);
+        System.out.println(ottoUrl);
         if (ottoTitle.contains("0TT0") && ottoUrl.contains("0TT0")) {
             System.out.println("TITLE and URL TEST PASSED");
         } else {
             System.out.println("TITLE and URL TEST FAİLED");
         }
+
+        driver.get("https://wisequarter.com/" );
+
+        String wqTitle = driver.getTitle();
+        boolean kelime = wqTitle.contains("Quarter");
+
+        System.out.println(wqTitle);
+        if (kelime){
+            System.out.println("WİSE QUARTER TEST PASSED");
+        }else {
+            System.out.println("WİSE QUARTER TEST PASSED");
+        }
+
+        driver.navigate().back();
+        driver.navigate().refresh();
+        driver.navigate().forward();
+
+        System.out.println("------------ TEST TAMAMLANDI ------------");
 
         driver.quit();
 
